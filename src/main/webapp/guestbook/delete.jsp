@@ -22,13 +22,13 @@ GuestbookDao dao = new GuestbookDaoOI(dbuser, dbpass);
 boolean success = dao.del(num, password);
 
 if(success){
-	response.sendRedirect(request.getContextPath());
+	response.sendRedirect(request.getContextPath() + "/guestbook/list.jsp");
 } else {
 	%>
 	
 	<h1>잘못되었음..</h1>
 	<p>비밀번호 틀린 듯??</p>
-	<p><a href ="<%=request.getContextPath()%>/deleteform.jsp?no=<%=num%>">돌아가기..</a></p>
+	<p><a href ="<%=request.getContextPath()%>/guestbook/deleteform.jsp?no=<%=num%>">돌아가기..</a></p>
 	
 	<%
 }

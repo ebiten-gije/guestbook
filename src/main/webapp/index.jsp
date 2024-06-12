@@ -10,7 +10,7 @@
 
 <h1>방명록 목록</h1>
 	<ul>
-		<li><a href = '<%=request.getContextPath() + "/guestbook/" %>'>Model 1</a></li>
+		<li><a href = '<%=request.getContextPath() + "/guestbook/list.jsp" %>'>Model 1</a></li>
 		<li><a href="<%=request.getContextPath() + "/el" %>">Model 2 (Servlet + JSP)</a></li>
 	</ul>
 </body>

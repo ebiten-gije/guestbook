@@ -22,7 +22,7 @@ String dbpass = context.getInitParameter("dbpass");
 	List <GuestbookVo> list = dao.getList();
 %>
 
-	<form action="<%=request.getContextPath()%>/add.jsp" method="POST">
+	<form action="<%=request.getContextPath()%>/guestbook/add.jsp" method="POST">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -46,8 +46,8 @@ String dbpass = context.getInitParameter("dbpass");
 			<td><%=vo.getNo()%></td>
 			<td><%=vo.getName()%></td>
 			<td><%=vo.getDate()%></td>
-			<td><a href="<%=request.getContextPath()%>/passconfirm.jsp?no=<%=vo.getNo()%>">수정</a></td>
-			<td><a href="<%=request.getContextPath()%>/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="<%=request.getContextPath()%>/guestbook/passconfirm.jsp?no=<%=vo.getNo()%>">수정</a></td>
+			<td><a href="<%=request.getContextPath()%>/guestbook/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan=5><%=vo.getContent()%></td>

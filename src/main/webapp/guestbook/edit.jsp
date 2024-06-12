@@ -27,7 +27,7 @@ GuestbookVo vo = dao.search(num, password);
 if(vo != null){
 %>
 <h4>수정 페이지</h4>
-<form action="<%=request.getContextPath()%>/update.jsp?no=<%=vo.getNo()%>" method="POST">
+<form action="<%=request.getContextPath()%>/guestbook/update.jsp?no=<%=vo.getNo()%>" method="POST">
 <table border=1 width=500>
 	<tr>
 		<td colspan=4><textarea name="content" cols=60 rows=5><%=vo.getContent()%></textarea></td>

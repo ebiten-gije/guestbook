@@ -22,13 +22,13 @@ GuestbookDao dao = new GuestbookDaoOI(dbuser, dbpass);
 boolean success = dao.add(vo);
 
 if(success){
-	response.sendRedirect(request.getContextPath());
+	response.sendRedirect(request.getContextPath() + "/guestbook/list.jsp");
 } else {
 	%>
 	
 	<h1>잘못되었음..</h1>
 	<p>뭔가 문제가 있는데?</p>
-	
+	<p><a href="list.jsp">메인으로 돌아가기</a></p>
 	<%
 }
 %>    

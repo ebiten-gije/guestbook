@@ -21,13 +21,13 @@ GuestbookDao dao = new GuestbookDaoOI(dbuser, dbpass);
 boolean success = dao.update(num, content);
 
 if(success){
-	response.sendRedirect(request.getContextPath());
+	response.sendRedirect(request.getContextPath() + "/guestbook/list.jsp");
 } else {
 	%>
 	
 	<h1>잘못되었음..</h1>
 	<p>뭔가 이상함</p>
-	<p><a href ="<%=request.getContextPath()%>">돌아가기..</a></p>
+	<p><a href ="list.jsp">돌아가기..</a></p>
 	
 	<%
 }
